@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="Audio"
+        android:id="@+id/audioFragment"
+        android:icon="@drawable/ic_audio" />
+
+    <item
+        android:title="Image"
+        android:id="@+id/imageFragment"
+        android:icon="@drawable/ic_image"/>
+
+    <item
+
+        android:title="Video"
+        android:id="@+id/videoFragment"
+        android:icon="@drawable/ic_video"/>
+
+
+</menu>

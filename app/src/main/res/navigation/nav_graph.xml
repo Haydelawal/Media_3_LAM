@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/audioFragment">
+
+    <fragment
+        android:id="@+id/audioFragment"
+        android:name="com.example.bg_1_audio_video_image.ui.home.bottom_nav_fragments.AudioFragment"
+        android:label="Audio"
+        tools:layout="@layout/fragment_audio" >
+        <action
+            android:id="@+id/action_audioFragment_to_playAudioActivity"
+            app:destination="@id/playAudioActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/videoFragment"
+        android:name="com.example.bg_1_audio_video_image.ui.home.bottom_nav_fragments.VideoFragment"
+        android:label="Video"
+        tools:layout="@layout/fragment_video" >
+        <action
+            android:id="@+id/action_videoFragment_to_playVideoActivity"
+            app:destination="@id/playVideoActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageFragment"
+        android:name="com.example.bg_1_audio_video_image.ui.home.bottom_nav_fragments.ImageFragment"
+        android:label="Image"
+        tools:layout="@layout/fragment_image" />
+    <activity
+        android:id="@+id/playAudioActivity"
+        android:name="com.example.bg_1_audio_video_image.ui.home.bottom_nav_fragments.activity.PlayAudioActivity"
+        android:label="activity_play_audio"
+        tools:layout="@layout/activity_play_audio" >
+        <argument
+            android:name="audioData"
+            app:argType="com.example.bg_1_audio_video_image.data.model.MyAudioData" />
+    </activity>
+    <activity
+        android:id="@+id/playVideoActivity"
+        android:name="com.example.bg_1_audio_video_image.ui.home.bottom_nav_fragments.activity.PlayVideoActivity"
+        android:label="activity_play_video"
+        tools:layout="@layout/activity_play_video" >
+        <argument
+            android:name="videoData"
+            app:argType="com.example.bg_1_audio_video_image.data.model.MyVideoData" />
+    </activity>
+</navigation>
